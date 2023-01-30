@@ -6,10 +6,41 @@ int contador = 0;
 int numeros[10] = {0,1,2,3,4,5,6,7,8,9};
 int pines_salida[7]={4,5,6,7,8,9,10};
 
+void generar_cero(){
+    digitalWrite(pines_salida[0], HIGH);
+    digitalWrite(pines_salida[1], HIGH);
+  	digitalWrite(pines_salida[2], HIGH);
+  	digitalWrite(pines_salida[3], HIGH);
+  	digitalWrite(pines_salida[4], HIGH);
+  	digitalWrite(pines_salida[5], HIGH);
+  	digitalWrite(pines_salida[6], LOW);
+  	
+}
+
+void generar_uno(){
+  	digitalWrite(pines_salida[0], LOW);
+  	digitalWrite(pines_salida[1], HIGH);
+  	digitalWrite(pines_salida[2], HIGH);
+  	digitalWrite(pines_salida[3], LOW);
+  	digitalWrite(pines_salida[4], LOW);
+  	digitalWrite(pines_salida[5], LOW);
+  	digitalWrite(pines_salida[6], LOW);
+}
+
+void generar_dos(){
+  	digitalWrite(pines_salida[0], HIGH);
+  	digitalWrite(pines_salida[1], HIGH);
+  	digitalWrite(pines_salida[2], LOW);
+  	digitalWrite(pines_salida[3], HIGH);
+  	digitalWrite(pines_salida[4], HIGH);
+  	digitalWrite(pines_salida[5], LOW);
+  	digitalWrite(pines_salida[6], HIGH);
+}
+
 void seleccion_numero(int valor){
   if(valor == 0){
-    Serial.println("cero");
-    Serial.println("\n");
+    //Serial.println("cero");
+    //Serial.println("\n");
   }else if(valor == 1){
     Serial.println("uno");
     Serial.println("\n");
